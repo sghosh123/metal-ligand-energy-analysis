@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "metal-ligand-energy-analysis"
+version = "0.2.0"
+description = "Utilities for analyzing metal–ligand energy scans and parsing Gaussian SCF energies"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["numpy>=1.22", "matplotlib>=3.5", "scipy>=1.8"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+metal-energy-scan = "metal_ligand_energy.cli:main"
+gaussian-scf-energies = "metal_ligand_energy.gaussian:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
