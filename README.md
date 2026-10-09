@@ -3,17 +3,6 @@
 A small Python toolkit for plotting 1D/2D metal–ligand energy scans and extracting
 final SCF energies from Gaussian output files.
 
-## What is validated here?
-
-The repository includes a real six-point Cu–DTBA S–H scan table located in the
-uploaded source archive. The included figure is regenerated from the processed
-table, and `docs/SOURCE_AUDIT.md` documents how that table relates to the original
-per-point energy files and legacy reference convention.
-
-This is a **processed-data reproduction**, not a claim that all original Gaussian
-logs have been independently reprocessed. The separate Gaussian parser is
-validated with test fixtures and can be run on Gaussian `.log`/`.out` files.
-
 ## Features
 
 - Load CSV data for 1D and 2D scans.
